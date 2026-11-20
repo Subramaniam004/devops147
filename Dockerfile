@@ -1,4 +1,5 @@
-FROM node:22
-WORKDIR /usr/
-COPY backend ./
-EXPOSE 3000
+FROM python:3.13
+WORKDIR /usr/local/app
+COPY index.html .
+EXPOSE 8080
+CMD ["python", "-m", "http.server", "8080"]
